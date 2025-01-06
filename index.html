@@ -152,7 +152,7 @@
 </head>
 
 <body>
-    <header id="header" class="bg-verde-oscuro text-center py-5">
+    <header id="inicio" class="bg-verde-oscuro text-center py-5">
         <div class="container d-flex align-items-center justify-content-center">
             <div class="row w-100">
                 <div class="col-md-4 mb-3 mb-md-0 text-md-left text-center">
@@ -174,7 +174,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand align-middle" href="#header" id="home-btn">Inicio</a>
+            <a class="navbar-brand align-middle" href="#" id="home-btn">Inicio</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -184,7 +184,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto d-flex justify-content-start w-100">
                     <li class="nav-item">
-                        <a class="nav-link animate__animated animate__fadeInLeft" href="#about">Quiénes somos</a>
+                        <a class="nav-link animate__animated animate__fadeInLeft" href="#somos">Quiénes somos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link animate__animated animate__fadeInRight" href="#valores">Valores</a>
@@ -198,7 +198,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link animate__animated animate__fadeInLeft" href="#contact">Contacto</a>
+                        <a class="nav-link animate__animated animate__fadeInLeft" href="#contacto">Contacto</a>
                     </li>
 
                 </ul>
@@ -223,14 +223,14 @@
     </section>
 
 
-    <section id="about" class="py-5 bg-crema animate__animated animate__fadeInLeft mb-6 mt-5 text-justify">
+    <section id="somos" class="py-5 bg-crema animate__animated animate__fadeInLeft mb-6 mt-5 text-justify">
         <div class="container">
             <h2>Quiénes somos</h2>
             <p>
                 <Strong>Somos una empresa fundada hace más de una década brindando el servicio de recolección de aceite vegetal
                 usado al sector hostelero nos dedicamos a dar soluciones ecológicas e innovadoras,</Strong> centrándonos en el
                 manejo de este residuo el cual representa una problemática que afecta tanto al comercio como a nuestro
-                medio ambiente. Este servicio es completamente gratuito y facilita a los establecimientos la correcta
+                medio ambiente. Este servicio es <strong>completamente gratuito </strong> y facilita a los establecimientos la correcta
                 disposición final del aceite vegetal usado, evitando así el impacto ambiental negativo que genera su mal
                 manejo. Además, ofrecemos un incentivo económico por cada litro recolectado aparte de grandes beneficios
                 para su negocio, lo que convierte nuestra solución en una oportunidad ventajosa para la sostenibilidad,
@@ -254,7 +254,7 @@
                 ambiental y fomenten la economía circular. Creemos en transformar lo que muchos ven como desechos en
                 recursos valiosos. Además, nuestra empresa cuenta con toda la permisologia necesaria para llevar a cabo
                 esta labor y brindar confianza a nuestros socios sobre la correcta disposición del aceite vegetal usado.
-                Con un enfoque en la colaboración y un servicio gratuito, queremos empoderar a nuestros socios para
+                Con un enfoque en la colaboración y un <strong>servicio gratuito,</strong> queremos empoderar a nuestros socios para
                 construir juntos un futuro más verde y próspero.
             </p>
         </div>
@@ -278,7 +278,7 @@
         <div class="container ">
             <h2>¿Cómo funciona nuestro servicio?</h2>
             <p>
-                <strong>En Ecoelite,</strong>  te ofrecemos un servicio completamente gratuito de recolección de aceite vegetal usado.
+                <strong>En Ecoelite,te ofrecemos un servicio completamente gratuito de recolección de aceite vegetal usado.</strong>
                 Únete
                 a nuestro esfuerzo por reducir el impacto ambiental y aprovechar este recurso para crear soluciones
                 sostenibles. ¡Es simple y sin compromisos!
@@ -324,7 +324,7 @@
             
                     <!-- Imagen 2 -->
                     <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                        <img src="cuñete.jpeg" alt="Empresa 2" 
+                        <img src="cuñete-removebg.png" alt="Empresa 2" 
                             class="img-fluid " style="max-height: 300px; object-fit: contain;">
                     </div>
             
@@ -344,7 +344,7 @@
 
 
 
-    <section id="contact" class="py-5 bg-crema animate__animated animate__fadeInLeft text-justify">
+    <section id="contacto" class="py-5 bg-crema animate__animated animate__fadeInLeft text-justify">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Columna de detalles de contacto -->
@@ -391,7 +391,7 @@
 
     <footer class="text-center bg-dark text-white py-2">
         <div class="container">
-            <a href="#header">
+            <a href="#">
                 <img src="Principal_Ecoelite-removebg-preview.png" alt="Logo Ecoelite" class="img-fluid d-inline-block"
                     style="width: 80px; height: auto; vertical-align: middle;">
             </a>
@@ -446,7 +446,7 @@
 
                 let activeSection = null;
 
-                $('section').each(function () {
+                $('section,header').each(function () {
                     var sectionTop = $(this).offset().top - navbarHeight; // Ajusta por la altura del navbar
                     var sectionBottom = sectionTop + $(this).outerHeight();
 
