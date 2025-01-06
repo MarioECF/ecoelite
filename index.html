@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ecoelite: Recolecta aceite vegetal usado de forma gratuita y recibe un incentivo económico por cada recolección.">
+    <meta name="author" content="Ecoelite">
+    <meta property="og:title" content="Ecoelite - Recolección de Aceite Vegetal Usado">
+    <meta property="og:description"
+        content="Ecoelite ofrece un servicio gratuito de recolección de aceite vegetal usado para el sector hostelero y negocios generadores de este residuo.">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:url" content="https://ecoelite.com.ve">
+    <title>Ecoelite - Recolección de Aceite Vegetal Usado</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .bg-crema {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .bg-verde-oscuro {
+            /*background-color: #004d00;*/
+            background-image: url(banner4.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+
+
+            color: #010902;
+            /*color: #95BF3B;*/
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #04a704;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-dark .navbar-nav .nav-link:hover {
+                color: #ffffff;
+                transform: scale(1.2);
+                box-shadow: 0px 4px 8px rgba(0, 7, 0, 0.5);
+                background-color: rgba(4, 167, 4, 0.2);
+                border-radius: 5px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-dark .navbar-nav .nav-link:hover {
+                color: #ffffff;
+                transform: none;
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+
+        .align-middle {
+            vertical-align: middle !important;
+        }
+
+        section[id] {
+            scroll-margin-top: 50px;
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #ffffff;
+        }
+
+        /* Transición suave para el botón del menú desplegable */
+        .navbar-toggler {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        /* Efecto de sobresalir al hacer clic */
+        .navbar-toggler:active {
+            transform: scale(1.1);
+            /* Aumenta ligeramente el tamaño */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Añade una sombra suave */
+        }
+
+        /* Animación de escalado */
+        #home-btn {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        #home-btn:active {
+            transform: scale(1.1);
+            /* Crece un 10% al hacer clic */
+        }
+
+        .btn-instagram {
+            background-color: #E1306C;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-instagram:hover {
+            background-color: #C13584;
+        }
+
+        .btn-instagram i {
+            margin-right: 8px;
+        }
+
+        .btn-success {
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+        .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    z-index: 1000;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+
+<body>
+    <header id="header" class="bg-verde-oscuro text-center py-5">
+        <div class="container d-flex align-items-center justify-content-center">
+            <div class="row w-100">
+                <div class="col-md-4 mb-3 mb-md-0 text-md-left text-center">
+                    <a href="#header">
+                        <img src="Principal_Ecoelite.png" alt="Logo Ecoelite" class="rounded-circle img-fluid"
+                            style="width:60%;">
+                    </a>
+                </div>
+                <div class="col-md-8 text-md-left text-center d-flex flex-column justify-content-center"
+                    style="color:#023e02">
+                    <h1 class="animate__animated animate__fadeInDown text-center">"Piensa verde, piensa Ecoelite."</h1>
+                    <p class="animate__animated animate__fadeInUp text-center">Soluciones ambientales para un futuro más
+                        sostenible.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand align-middle" href="#header" id="home-btn">Inicio</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto d-flex justify-content-start w-100">
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__fadeInLeft" href="#about">Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__fadeInRight" href="#valores">Valores</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__fadeInLeft" href="#servicio">Servicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__fadeInRight" href="#aliado">Aliado Elite</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__fadeInLeft" href="#contact">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="banner" class="bg-green animate__animated animate__fadeInRight text-white py-5 mb-5">
+
+        <div class="container text-center mt-5">
+            <h1 class="display-4">¡Recicla tu Aceite Vegetal Usado con Ecoelite!</h1>
+            <p class="lead">Únete a nosotros en este esfuerzo por transformar un desecho en una oportunidad.
+                Recolección gratuita en toda Venezuela.</p>
+            <div class="mt-4">
+                <a href="https://wa.me/584241795891?text=¡Hola! Estoy visitando tu sitio web y me gustaría obtener más información." target="_blank" class="btn btn-success btn-lg">
+                    <i class="fab fa-whatsapp"></i> ¡Contáctanos por WhatsApp!
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="about" class="py-5 bg-crema animate__animated animate__fadeInLeft mb-6 mt-5 text-justify">
+        <div class="container">
+            <h2>Quiénes somos</h2>
+            <p>
+                <Strong>Somos una empresa fundada hace más de una década brindando el servicio de recolección de aceite vegetal
+                usado al sector hostelero nos dedicamos a dar soluciones ecológicas e innovadoras,</Strong> centrándonos en el
+                manejo de este residuo el cual representa una problemática que afecta tanto al comercio como a nuestro
+                medio ambiente. Este servicio es completamente gratuito y facilita a los establecimientos la correcta
+                disposición final del aceite vegetal usado, evitando así el impacto ambiental negativo que genera su mal
+                manejo. Además, ofrecemos un incentivo económico por cada litro recolectado aparte de grandes beneficios
+                para su negocio, lo que convierte nuestra solución en una oportunidad ventajosa para la sostenibilidad,
+                trazabilidad y el manejo de recursos. Únete a nosotros en este esfuerzo por transformar un desperdicio
+                en una oportunidad que beneficia tanto a tu negocio como al medio ambiente.
+            </p>
+        </div>
+    </section>
+
+
+
+    </section>
+
+    <section id="valores" class="py-5 bg-crema animate__animated animate__fadeInRight text-justify">
+        <div class="container">
+            <h2>Misión</h2>
+            <p>
+                En <strong>Ecoelite C.A</strong> ,nuestra misión es ofrecer soluciones sostenibles para la recolección y
+                gestión de aceite vegetal usado en el sector hostelero. Ayudamos a los negocios a gestionar su aceite
+                vegetal usado generado de forma responsable, promoviendo prácticas ecológicas que minimicen el impacto
+                ambiental y fomenten la economía circular. Creemos en transformar lo que muchos ven como desechos en
+                recursos valiosos. Además, nuestra empresa cuenta con toda la permisologia necesaria para llevar a cabo
+                esta labor y brindar confianza a nuestros socios sobre la correcta disposición del aceite vegetal usado.
+                Con un enfoque en la colaboración y un servicio gratuito, queremos empoderar a nuestros socios para
+                construir juntos un futuro más verde y próspero.
+            </p>
+        </div>
+    </section>
+
+    <section id="vision" class="py-5 bg-crema animate__animated animate__fadeInRight text-justify">
+        <div class="container">
+            <h2>Visión</h2>
+            <p>
+               <strong> Buscamos ser líderes en la gestión sostenible de residuos de aceite
+                vegetal, promoviendo una economía circular que fomente prácticas responsables en la industria hostelera.</strong>
+                Nuestro objetivo es transformar la manera en que se trata el aceite usado, convirtiéndolo en un recurso
+                valioso que beneficie tanto al medio ambiente como a nuestros socios. Aspiramos a crear un futuro en el
+                que cada negocio adopte prácticas ecológicas, contribuyendo así a un planeta más limpio y sostenible
+                para las generaciones venideras.
+            </p>
+        </div>
+
+    </section>
+    <section id="servicio" class="py-5 bg-crema animate__animated animate__fadeInLeft text-justify">
+        <div class="container ">
+            <h2>¿Cómo funciona nuestro servicio?</h2>
+            <p>
+                <strong>En Ecoelite,</strong>  te ofrecemos un servicio completamente gratuito de recolección de aceite vegetal usado.
+                Únete
+                a nuestro esfuerzo por reducir el impacto ambiental y aprovechar este recurso para crear soluciones
+                sostenibles. ¡Es simple y sin compromisos!
+            </p>
+            <div class="container align-items-center ">
+                <div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080;">
+                    <iframe
+                        src="https://share.synthesia.io/embeds/videos/f6283f9b-8af3-4d83-a6e1-0fbbbc3f7a7a?autoplay=0&mute=0"
+                        loading="lazy" title="Synthesia video player - Ecoelite" allowfullscreen
+                        allow="encrypted-media; fullscreen;"
+                        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin:0; overflow: hidden;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="container text text-center"></div>
+            <img src="Captura_mario-removebg.png" alt="Servicio Ecoelite" class="img-fluid"
+                style="max-width: 100%; ; height: auto;">
+            <div class="mt-4">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="aliado" class="py-5 bg-crema animate__animated animate__fadeInRight text-justify">
+        <div class="container ">
+            <h2>Aliado Elite</h2>
+            <p>
+                <strong>  Premiamos tu fidelidad y compromiso,</strong> por lo que al ser un aliado Elite disfrutas de muchos
+                beneficios entre los cuales, gracias a nuestra alianza estrategica con la empresa Agroelite C.A, puedes
+                optar por comprar nuestra oleina de palma de uso industrial en presentacion de cuñete de 18 litros a un
+                precio preferencial, premiamos tu fidelidad y <strong> por cada litro de aceite vegetal usado retirado por
+                nosotros, optas por un 5% de descuento en la compra de nuestra oleina de palma Elite.</strong>
+            </p>
+
+            <div class="container text-center py-5">
+                
+                <div class="row g-3">
+                    <!-- Imagen 1 -->
+                    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="logotipo_agroelite_2022_ca_curvas.png" alt="Empresa 1" 
+                            class="img-fluid " style="max-height: 300px; object-fit: contain;">
+                    </div>
+            
+                    <!-- Imagen 2 -->
+                    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="cuñete.jpeg" alt="Empresa 2" 
+                            class="img-fluid " style="max-height: 300px; object-fit: contain;">
+                    </div>
+            
+                    <!-- Imagen 3 -->
+                    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="Principal_Ecoelite-removebg-preview.png" alt="Empresa 3" 
+                            class="img-fluid " style="max-height: 300px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+
+    </section>
+
+
+
+
+    <section id="contact" class="py-5 bg-crema animate__animated animate__fadeInLeft text-justify">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna de detalles de contacto -->
+                <div class="col-md-5 mb-5 ">
+                    <h2>Contacto</h2>
+                    <p><strong>Direccion:</strong> Urb.Industrial del Este, Carretera de Petare Santa Lucia Nº25.
+                        Filas de Mariche, Caracas, Venezuela.</p>
+                    
+                    <p><strong>E-mail:</strong> <a href="mailto:ecoelite2022@gmail.com">ecoelite2022@gmail.com</a></p>
+                    <p><strong>Móvil:</strong> <a href="tel:+584241795891">+584241795891</a></p>
+                    <p>
+                        <a href="https://wa.me/584241795891?text=¡Hola! Estoy visitando tu sitio web y me gustaría obtener más información." target="_blank" class="btn btn-success">
+                            <i class="fab fa-whatsapp"></i> Enviar mensaje por WhatsApp
+                        </a>
+                    </p>
+                    <a href="https://www.instagram.com/ecoelite.vzla/" target="_blank" class="btn btn-instagram">
+                        <i class="fab fa-instagram"></i> Síguenos en Instagram
+                    </a>
+
+                </div>
+
+                <!-- Columna del mapa -->
+                <div class="col-md-6 mb-5">
+                    <div class="border rounded shadow p-2">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d37323.53824607045!2d-66.89640339571005!3d10.488548193939021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1735832245546!5m2!1sen!2ses"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5"></div>
+        <div class="mb-5"></div>
+    </section>
+
+    <a href="https://wa.me/584241795891?text=Hola,%20te%20contacto%20desde%20la%20web%20de%20Ecoelite.%20¡Estoy%20interesado/a%20en%20sus%20servicios!" 
+    target="_blank" 
+    class="whatsapp-float">
+     <i class="fab fa-whatsapp"></i>
+ </a>
+ 
+
+
+    <footer class="text-center bg-dark text-white py-2">
+        <div class="container">
+            <a href="#header">
+                <img src="Principal_Ecoelite-removebg-preview.png" alt="Logo Ecoelite" class="img-fluid d-inline-block"
+                    style="width: 80px; height: auto; vertical-align: middle;">
+            </a>
+            <p class="d-inline-block mb-0">© 2025 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function getNavbarHeight() {
+                return $('.navbar').outerHeight(); // Obtiene la altura dinámica del navbar
+            }
+
+            if ($(window).width() < 768) {
+                $('.navbar-toggler').trigger('click'); // Despliega el menú automáticamente
+                setTimeout(function () {
+                    $('.navbar-collapse').collapse('hide'); // Cierra el menú después de 3 segundos si no se usa
+                }, 3000);
+            }
+
+            $('a.nav-link, #home-btn').on('click', function (event) {
+                event.preventDefault(); // Previene el comportamiento por defecto
+                var target = $(this).attr('href'); // Obtiene el destino del enlace
+                var navbarHeight = getNavbarHeight(); // Altura dinámica del navbar
+                var duration = $(window).width() < 768 ? 1200 : 800; // Ajusta la duración del desplazamiento según el ancho de la pantalla
+
+                if (target === '#') {
+                    $('html, body').animate({
+                        scrollTop: 0 // Desplaza la página hasta el inicio
+                    }, duration);
+                    history.pushState(null, null, '/'); // Actualiza la URL al inicio
+                } else {
+                    var targetOffset = $(target).offset().top - navbarHeight; // Calcula la posición de desplazamiento
+                    $('html, body').animate({
+                        scrollTop: targetOffset
+                    }, duration);
+                    history.pushState(null, null, target); // Actualiza la URL con el id del destino
+                }
+
+                $('.navbar-collapse').collapse('hide'); // Cierra el menú al seleccionar una opción
+                $(this).blur();
+            });
+
+            $(window).on('scroll', function () {
+                var scrollDistance = $(window).scrollTop();
+                var navbarHeight = getNavbarHeight();
+
+                let activeSection = null;
+
+                $('section,header').each(function () {
+                    var sectionTop = $(this).offset().top - navbarHeight; // Ajusta por la altura del navbar
+                    var sectionBottom = sectionTop + $(this).outerHeight();
+
+                    // Detecta si el punto central del viewport cae dentro de esta sección
+                    if (scrollDistance + $(window).height() / 3 >= sectionTop && scrollDistance + $(window).height() / 3 <= sectionBottom) {
+                        activeSection = $(this).attr('id');
+                    }
+                });
+
+                if (activeSection) {
+                    $('a.nav-link').removeClass('active');
+                    $('a.nav-link[href="#' + activeSection + '"]').addClass('active');
+                    history.replaceState(null, null, '#' + activeSection); // Actualiza la URL dinámicamente
+                }
+            }).scroll();
+        });
+    </script>
+
+</body>
+
+</html>
