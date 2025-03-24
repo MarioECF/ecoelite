@@ -151,3 +151,14 @@ section[id] {
     font-size: 16px;
     transition: all;
 } 
+.logo-ecoelite {
+    width: 100%;
+    max-width: 200px; /* Ajustable según tu diseño */
+    height: auto;
+}
+
+@media (max-width: 576px) {
+    .logo-ecoelite {
+        max-width: 140px; /* Tamaño más pequeño en móviles */
+    }
+}
