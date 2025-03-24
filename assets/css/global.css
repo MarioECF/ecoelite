@@ -152,7 +152,6 @@ section[id] {
     transition: all;
 } 
 .logo-ecoelite {
-    width: 100%;
     max-width: 180px; /* Ajustable según tu diseño */
     height: auto;
 }
