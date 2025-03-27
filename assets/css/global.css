@@ -10,15 +10,12 @@ body {
 }
 
 .bg-verde-oscuro {
-    /*background-color: #004d00;*/
-    background-image:url(banner3.jpg);
+    background-image: url("banner3.webp");
     background-position: center;
     background-size: cover;
-
-
     color: #010902;
-    /*color: #95BF3B;*/
 }
+
 
 .navbar-dark .navbar-nav .nav-link {
     color: #04a704;
