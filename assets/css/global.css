@@ -158,6 +158,6 @@ section[id] {
 
 @media (max-width: 576px) {
     .logo-ecoelite {
-        max-width: 140px; /* Tamaño más pequeño en móviles */
+        max-width: 180px; /* Tamaño más pequeño en móviles */
     }
 }
