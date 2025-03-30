@@ -58,5 +58,14 @@ $(document).ready(function () {
             $('a.nav-link[href="#' + activeSection + '"]').addClass('active');
             history.replaceState(null, null, '#' + activeSection);
         }
+        $(document).on('click', function (event) {
+            const isMobile = $(window).width() < 768;
+            const isNavbarOpen = $('.navbar-collapse').hasClass('show');
+            const clickOutsideNavbar = !$(event.target).closest('.navbar-collapse, .navbar-toggler').length;
+    
+            if (isMobile && isNavbarOpen && clickOutsideNavbar) {
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
     }).scroll();
 });
