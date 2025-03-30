@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ecoelite.com.ve/sitemap.xml
