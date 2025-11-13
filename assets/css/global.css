@@ -1,4 +1,6 @@
-
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
 body {
     background-color: #000;
     color: #fff;
@@ -13,13 +15,24 @@ body {
     background-image: url("banner3.webp");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     color: #010902;
 }
 
+.bg-green {
+    background-image: url("vista-aerea-bosque-verde-banner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
 .navbar-dark .navbar-nav .nav-link {
     color: #04a704;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    will-change: transform;
 }
 
 @media (min-width: 768px) {
@@ -49,33 +62,46 @@ section[id] {
     scroll-margin-top: 50px;
 }
 
+@media (max-width: 767px) {
+    section[id] {
+        scroll-margin-top: 0px;
+    }
+}
+
 .navbar-dark .navbar-nav .nav-link.active {
     color: #ffffff;
 }
 
-/* Transición suave para el botón del menú desplegable */
 .navbar-toggler {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none;
 }
 
-/* Efecto de sobresalir al hacer clic */
 .navbar-toggler:active {
     transform: scale(1.1);
-    /* Aumenta ligeramente el tamaño */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Añade una sombra suave */
 }
 
-/* Animación de escalado */
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(4, 167, 4, 0.25);
+}
+
 #home-btn {
     transition: transform 0.2s ease-in-out;
 }
 
 #home-btn:active {
     transform: scale(1.1);
-    /* Crece un 10% al hacer clic */
 }
 
+#home-btn:hover {
+    text-decoration: none;
+    color: #04a704;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
 .btn-instagram {
     background-color: #E1306C;
     color: white;
@@ -86,11 +112,14 @@ section[id] {
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
 }
 
 .btn-instagram:hover {
     background-color: #C13584;
+    color: white;
+    text-decoration: none;
 }
 
 .btn-instagram i {
@@ -102,6 +131,30 @@ section[id] {
     padding: 10px 20px;
 }
 
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   FLOATING ELEMENTS
+   ========================================================================== */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -118,43 +171,79 @@ section[id] {
     text-decoration: none;
     z-index: 1000;
     font-size: 30px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    background-color: #1ebe5d; /* mismo estilo verde más oscuro */
+    background-color: #1ebe5d;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    color: black;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-
-.bg-green{
-    background-image: url(vista-aerea-bosque-verde-banner.jpg);
-    background-position: center;
-    
-}  
-/* Botón WhatsApp unificado */
-.btn-whatsapp {
-    background-color: #25d366; /* Verde WhatsApp */
     color: white;
-    border-radius: 30px;
-    padding: 10px 20px;
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    transition: all;
 } 
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
 .logo-ecoelite {
-    max-width: 180px; /* Ajustable según tu diseño */
-    
+    max-width: 180px;
+    height: auto;
 }
 
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
 @media (max-width: 576px) {
     .logo-ecoelite {
-        max-width: 180px; /* Tamaño más pequeño en móviles */
+        max-width: 150px;
     }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    #contacto {
+        padding-top: 5px !important;
+    }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   SECURITY
+   ========================================================================== */
+/* Prevenir clickjacking */
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Permitir selección en elementos de texto */
+p, h1, h2, h3, h4, h5, h6, span, div {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }

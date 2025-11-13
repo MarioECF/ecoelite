@@ -27,15 +27,31 @@
     <title>Ecoelite - Recolección y Reciclaje de Aceite Vegetal Usado - En Venezuela</title>
 
 
+    <!-- Preconnect para mejorar rendimiento -->
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
     <!-- CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="icon" type="image/png"  href="/icons/icon_512x512.png">
-    <link rel="apple-touch-icon" href="/icons/icon_512x512.png">
+    <link rel="icon" type="image/png"  href="icons/icon_512x512.png">
+    <link rel="apple-touch-icon" href="icons/icon_512x512.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2ecc71">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://code.jquery.com https://stackpath.bootstrapcdn.com https://cdn.segment.synthesia.io;
+        style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com;
+        img-src 'self' data: https:;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        connect-src 'self' https: data: blob:;
+        frame-src 'self' https://share.synthesia.io https://www.googletagmanager.com;
+        media-src 'self' https:;
+    ">
 
     <script type="application/ld+json">
         {
@@ -76,8 +92,8 @@
             <div class="row w-100">
                 <div class="col-md-4 mb-3 mb-md-0 text-md-left text-center">
                     <a href="#header">
-                        <img src="assets/img/Principal_Ecoelite-removebg-preview.png" alt="Logo Ecoelite"
-                            class="bg-crema rounded-circle img-fluid logo-ecoelite">
+                        <img src="assets/img/Principal_Ecoelite-removebg-preview.png" alt="Logo de EcoElite - Empresa de reciclaje de aceite vegetal usado en Venezuela"
+                            class="bg-crema rounded-circle img-fluid logo-ecoelite" loading="lazy">
                     </a>
                 </div>
                 <div class="col-md-8 text-md-left text-center d-flex flex-column justify-content-center"
@@ -122,7 +138,7 @@
                 <!-- Enlace de inicio de sesión alineado a la derecha -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link animate__animated animate__fadeInRight" href="https://ecoelite.app">
+                        <a class="nav-link animate__animated animate__fadeInRight" href="https://ecoelite.app" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-user"></i> Inicio de sesión
                         </a>
                     </li>
@@ -141,7 +157,7 @@
                 Recolección gratuita en toda Venezuela.</p>
             <div class="mt-4">
                 <a href="https://wa.me/584241795891?text=¡Hola! Estoy visitando tu sitio web y me gustaría obtener más información."
-                    target="_blank" class="btn btn-success btn-lg btn-whatsapp">
+                    target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> ¡Contáctanos por WhatsApp!</a>
 
             </div>
@@ -168,10 +184,6 @@
                 en una oportunidad que beneficia tanto a tu negocio como al medio ambiente.
             </p>
         </div>
-    </section>
-
-
-
     </section>
 
     <section id="valores" class="py-5 bg-crema animate__animated animate__fadeInRight text-justify">
@@ -220,7 +232,7 @@
                 <div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080;">
                     <iframe
                         src="https://share.synthesia.io/embeds/videos/ae3fced0-6c05-47d0-8818-697d3c032e82?autoplay=0&mute=0"
-                        loading="lazy" title="Ecoelite" allowfullscreen allow="encrypted-media; fullscreen;"
+                        loading="lazy" title="Ecoelite" allow="encrypted-media; fullscreen;"
                         style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin:0; overflow: hidden;">
                     </iframe>
 
@@ -231,13 +243,13 @@
                 <div class="row g-4">
                     <!-- Imagen 1 -->
                     <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                        <img src="assets/img/comofunciona1.png" alt="Imagen 1" class="img-fluid"
+                        <img src="assets/img/comofunciona1.png" alt="Paso 1: Contacta con EcoElite para programar la recolección de aceite vegetal usado" class="img-fluid" loading="lazy"
                             style="max-height: 500px; object-fit: contain;">
                     </div>
 
                     <!-- Imagen 2 -->
                     <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                        <img src="assets/img/comofunciona2.png" alt="Imagen 2" class="img-fluid"
+                        <img src="assets/img/comofunciona2.png" alt="Paso 2: Nuestro equipo recolecta el aceite vegetal usado de forma gratuita" class="img-fluid" loading="lazy"
                             style="max-height: 500px; object-fit: contain;">
                     </div>
                 </div>
@@ -267,19 +279,19 @@
                 <div class="row g-3">
                     <!-- Imagen 1 -->
                     <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                        <img src="assets/img/logotipo_agroelite_2022_ca_curvas.png" alt="Empresa 1" class="img-fluid "
+                        <img src="assets/img/logotipo_agroelite_2022_ca_curvas.png" alt="Logo de Agroelite C.A - Empresa aliada de EcoElite" class="img-fluid" loading="lazy"
                             style="max-height: 300px; object-fit: contain;">
                     </div>
 
                     <!-- Imagen 2 -->
                     <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                        <img src="assets/img/bolsa_aceite1.png" alt="Empresa 2" class="img-fluid "
+                        <img src="assets/img/bolsa_aceite1.png" alt="Oleína de palma Elite en presentación de 9 litros" class="img-fluid" loading="lazy"
                             style="max-height: 230px; object-fit: contain;">
                     </div>
 
                     <!-- Imagen 3 -->
                     <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                        <img src="assets/img/Principal_Ecoelite-removebg-preview.png" alt="Empresa 3" class="img-fluid "
+                        <img src="assets/img/Principal_Ecoelite-removebg-preview.png" alt="Logo de EcoElite - Reciclaje sostenible de aceite vegetal" class="img-fluid" loading="lazy"
                             style="max-height: 300px; object-fit: contain;">
                     </div>
                 </div>
@@ -306,11 +318,11 @@
                     <p><strong>Móvil:</strong> <a href="tel:+584241795891">+584241795891</a></p>
                     <p>
                         <a href="https://wa.me/584241795891?text=¡Hola! Estoy visitando tu sitio web y me gustaría obtener más información."
-                            target="_blank" class="btn btn-success btn-whatsapp">
+                            target="_blank" rel="noopener noreferrer" class="btn btn-success btn-whatsapp">
                             <i class="fab fa-whatsapp"></i> Enviar mensaje por WhatsApp
                         </a>
                     </p>
-                    <a href="https://www.instagram.com/ecoelite.vzla/" target="_blank" class="btn btn-instagram">
+                    <a href="https://www.instagram.com/ecoelite.vzla/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
                         <i class="fab fa-instagram"></i> Síguenos en Instagram
                     </a>
 
@@ -319,7 +331,7 @@
                 <!-- Columna del mapa -->
                 <div class="col-md-6 mb-5">
                     <div class="border rounded shadow p-2">
-                        <img src="assets/img/caracas.jpg" alt="mapacaracas" class="img-fluid">
+                        <img src="assets/img/caracas.jpg" alt="Mapa de ubicación de EcoElite en Caracas, Venezuela" class="img-fluid" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -337,8 +349,8 @@
     <footer class="text-center bg-dark text-white py-2">
         <div class="container">
             <a href="#">
-                <img src="assets/img/Principal_Ecoelite-removebg-preview.png" alt="Logo Ecoelite"
-                    class="img-fluid d-inline-block" style="width: 80px; height: auto; vertical-align: middle;">
+                <img src="assets/img/Principal_Ecoelite-removebg-preview.png" alt="Logo de EcoElite"
+                    class="img-fluid d-inline-block" style="width: 80px; height: auto; vertical-align: middle;" loading="lazy">
             </a>
             <p class="d-inline-block mb-0">© 2025 Todos los derechos reservados.</p>
         </div>
