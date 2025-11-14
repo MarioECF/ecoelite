@@ -194,4 +194,34 @@ $(document).ready(function () {
             console.error('Error en visibilitychange:', error);
         }
     });
+
+    // Cursor personalizado moderno
+    const cursor = $('<div class="cursor"></div>');
+    $('body').append(cursor);
+
+    $(document).mousemove(function(e) {
+        cursor.css({
+            left: e.clientX - 10,
+            top: e.clientY - 10
+        });
+    });
+
+    // Efecto de ondas al hacer clic
+    $(document).click(function(e) {
+        const ripple = $('<div class="ripple"></div>');
+        $('body').append(ripple);
+        
+        ripple.css({
+            left: e.clientX - 25,
+            top: e.clientY - 25
+        });
+        
+        setTimeout(() => ripple.remove(), 600);
+    });
+
+    // Parallax moderno para el header
+    $(window).scroll(function() {
+        const scrolled = $(this).scrollTop();
+        $('#inicio').css('transform', `translateY(${scrolled * 0.5}px)`);
+    });
 });
