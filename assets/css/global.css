@@ -292,19 +292,21 @@ h2 {
 }
 
 /* Cursor personalizado con efecto de aceite */
-body {
-    cursor: none;
-}
-
-.cursor {
-    width: 12px;
-    height: 18px;
-    background: linear-gradient(135deg, #FFD700, #FFC107);
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
+@media (min-width: 768px) {
+    body {
+        cursor: none;
+    }
+    
+    .cursor {
+        width: 12px;
+        height: 18px;
+        background: linear-gradient(135deg, #FFD700, #FFC107);
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+    }
 }
 
 /* Efecto sutil de ondas como gota de aceite */
