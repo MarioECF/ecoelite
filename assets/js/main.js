@@ -197,20 +197,7 @@ $(document).ready(function () {
 
 
 
-    // Efecto de ondas al hacer clic - Solo desktop
-    if ($(window).width() >= 768) {
-        $(document).click(function(e) {
-            const ripple = $('<div class="ripple"></div>');
-            $('body').append(ripple);
-            
-            ripple.css({
-                left: e.clientX - 25,
-                top: e.clientY - 25
-            });
-            
-            setTimeout(() => ripple.remove(), 3500);
-        });
-    }
+
 
     // Parallax moderno para el header - Solo desktop
     if ($(window).width() >= 768) {
