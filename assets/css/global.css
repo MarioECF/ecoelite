@@ -211,7 +211,12 @@ section[id] {
 @media (max-width: 767px) {
     #contacto {
         padding-top: 5px !important;
+        scroll-margin-top: 0 !important;
     }
+}
+
+#contacto {
+    scroll-margin-top: 0 !important;
 }
 
 /* ==========================================================================
@@ -231,11 +236,13 @@ section[id] {
 /* ==========================================================================
    MODERN EFFECTS 2025
    ========================================================================== */
-/* Glassmorphism para botones */
-.btn-whatsapp, .btn-instagram {
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+/* Glassmorphism para botones - Solo desktop */
+@media (min-width: 768px) {
+    .btn-whatsapp, .btn-instagram {
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .btn-whatsapp {
@@ -246,35 +253,61 @@ section[id] {
     background: linear-gradient(135deg, #E1306C, #C13584, #833AB4);
 }
 
-/* Efecto Bento Box para secciones */
-section {
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    background: rgba(245, 245, 245, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 10px;
+/* Efecto Bento Box para secciones - Optimizado para móviles */
+@media (min-width: 768px) {
+    section {
+        border-radius: 24px;
+        backdrop-filter: blur(20px);
+        background: rgba(245, 245, 245, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 10px;
+    }
 }
 
-/* Efecto Morphing para imágenes */
-.img-fluid {
-    border-radius: 20px;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    filter: brightness(1) contrast(1);
+@media (max-width: 767px) {
+    section {
+        border-radius: 12px;
+        background: rgba(245, 245, 245, 0.95);
+        margin: 5px;
+    }
 }
 
-.img-fluid:hover {
-    border-radius: 50px;
-    filter: brightness(1.1) contrast(1.2) saturate(1.3);
-    transform: scale(1.05) rotate(2deg);
+/* Efecto Morphing para imágenes - Solo desktop */
+@media (min-width: 768px) {
+    .img-fluid {
+        border-radius: 20px;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        filter: brightness(1) contrast(1);
+    }
+    
+    .img-fluid:hover {
+        border-radius: 50px;
+        filter: brightness(1.1) contrast(1.2) saturate(1.3);
+        transform: scale(1.05) rotate(2deg);
+    }
 }
 
-/* Gradientes animados para títulos */
-h2 {
-    background: linear-gradient(270deg, #25d366, #04a704, #2ecc71);
-    background-size: 600% 600%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 3s ease infinite;
+@media (max-width: 767px) {
+    .img-fluid {
+        border-radius: 10px;
+    }
+}
+
+/* Gradientes animados para títulos - Solo desktop */
+@media (min-width: 768px) {
+    h2 {
+        background: linear-gradient(270deg, #25d366, #04a704, #2ecc71);
+        background-size: 600% 600%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientShift 3s ease infinite;
+    }
+}
+
+@media (max-width: 767px) {
+    h2 {
+        color: #25d366;
+    }
 }
 
 @keyframes gradientShift {
@@ -283,61 +316,57 @@ h2 {
     100% { background-position: 0% 50%; }
 }
 
-/* Efecto Neumorphism para el navbar */
-.navbar {
-    background: linear-gradient(145deg, #2c3e50, #34495e);
-    box-shadow: 20px 20px 60px #1a252f, -20px -20px 60px #3e5771;
-    border-radius: 30px;
-    margin: 10px;
+/* Efecto Neumorphism para el navbar - Optimizado */
+@media (min-width: 768px) {
+    .navbar {
+        background: linear-gradient(145deg, #2c3e50, #34495e);
+        box-shadow: 20px 20px 60px #1a252f, -20px -20px 60px #3e5771;
+        border-radius: 30px;
+        margin: 10px;
+    }
 }
 
-/* Cursor personalizado con efecto de aceite */
+@media (max-width: 767px) {
+    .navbar {
+        background: #2c3e50;
+        border-radius: 15px;
+        margin: 5px;
+    }
+}
+
+
+
+/* Efecto sutil de ondas - Solo desktop */
 @media (min-width: 768px) {
-    body {
-        cursor: none;
+    .ripple {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 193, 7, 0.6);
+        background: transparent;
+        pointer-events: none;
+        z-index: 9998;
+        animation: subtleRipple 3.5s ease-out;
     }
     
-    .cursor {
-        width: 12px;
-        height: 18px;
-        background: linear-gradient(135deg, #FFD700, #FFC107);
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-        border-radius: 50% 50% 50% 0;
-        transform: rotate(-45deg);
+    .ripple::before,
+    .ripple::after {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 193, 7, 0.4);
+        animation: subtleRipple 3.5s ease-out 1s;
     }
-}
-
-/* Efecto sutil de ondas como gota de aceite */
-.ripple {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 193, 7, 0.6);
-    background: transparent;
-    pointer-events: none;
-    z-index: 9998;
-    animation: subtleRipple 3.5s ease-out;
-}
-
-.ripple::before,
-.ripple::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 193, 7, 0.4);
-    animation: subtleRipple 3.5s ease-out 1s;
-}
-
-.ripple::after {
-    border: 3px solid rgba(255, 193, 7, 0.25);
-    animation-delay: 2s;
+    
+    .ripple::after {
+        border: 3px solid rgba(255, 193, 7, 0.25);
+        animation-delay: 2s;
+    }
 }
 
 @keyframes subtleRipple {
@@ -353,7 +382,6 @@ h2 {
 
 /* Hover effects modernos */
 a, button, .btn {
-    cursor: none;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -454,5 +482,4 @@ p, h1, h2, h3, h4, h5, h6, span, div {
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
-    cursor: none;
 }

@@ -74,7 +74,7 @@ $(document).ready(function () {
                         const currentNavbarHeight = $('.navbar').outerHeight() || 56;
                         // Manejo especial para la sección de contacto
                         if (sanitizedTarget === '#contacto') {
-                            targetOffset = $targetElement.offset().top - currentNavbarHeight - 15;
+                            targetOffset = $targetElement.offset().top - currentNavbarHeight;
                         } else {
                             targetOffset = $targetElement.offset().top - currentNavbarHeight + 45;
                         }
@@ -195,29 +195,22 @@ $(document).ready(function () {
         }
     });
 
-    // Cursor personalizado moderno
-    const cursor = $('<div class="cursor"></div>');
-    $('body').append(cursor);
 
-    $(document).mousemove(function(e) {
-        cursor.css({
-            left: e.clientX - 10,
-            top: e.clientY - 10
-        });
-    });
 
-    // Efecto de ondas al hacer clic
-    $(document).click(function(e) {
-        const ripple = $('<div class="ripple"></div>');
-        $('body').append(ripple);
-        
-        ripple.css({
-            left: e.clientX - 25,
-            top: e.clientY - 25
+    // Efecto de ondas al hacer clic - Solo desktop
+    if ($(window).width() >= 768) {
+        $(document).click(function(e) {
+            const ripple = $('<div class="ripple"></div>');
+            $('body').append(ripple);
+            
+            ripple.css({
+                left: e.clientX - 25,
+                top: e.clientY - 25
+            });
+            
+            setTimeout(() => ripple.remove(), 3500);
         });
-        
-        setTimeout(() => ripple.remove(), 600);
-    });
+    }
 
     // Parallax moderno para el header
     $(window).scroll(function() {
