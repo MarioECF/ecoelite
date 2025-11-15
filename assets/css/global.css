@@ -220,7 +220,7 @@ section[id] {
 }
 
 /* ==========================================================================
-   ACCESSIBILITY
+   ACCESSIBILITY & PERFORMANCE
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -230,6 +230,23 @@ section[id] {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+}
+
+/* Disable heavy animations on low-end devices */
+@media (max-width: 767px) {
+    .animate__animated {
+        animation: none !important;
+    }
+    
+    * {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .btn:hover, a:hover {
+        transform: none !important;
+        filter: none !important;
     }
 }
 
