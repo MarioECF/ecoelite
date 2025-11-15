@@ -327,6 +327,16 @@ section[id] {
     }
 }
 
+/* Override para banner - texto blanco */
+#banner h2,
+#banner p {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: white !important;
+    color: white !important;
+    animation: none !important;
+}
+
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
