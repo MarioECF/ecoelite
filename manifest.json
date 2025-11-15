@@ -1,10 +1,13 @@
 {
-  "name": "EcoElite",
+  "name": "EcoElite - Recolección de Aceite Vegetal Usado",
   "short_name": "EcoElite",
+  "description": "Recolección gratuita de aceite vegetal usado en Venezuela con incentivo económico",
+  "lang": "es-VE",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2ecc71",
+  "categories": ["business", "utilities", "lifestyle"],
   "icons": [
     {
       "src": "icons/icon_192x192.png",

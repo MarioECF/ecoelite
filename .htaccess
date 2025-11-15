@@ -25,8 +25,8 @@
 # Cache del navegador
 <IfModule mod_expires.c>
     ExpiresActive on
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
@@ -40,4 +40,11 @@
     Header always set X-Frame-Options DENY
     Header always set X-Content-Type-Options nosniff
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Protección contra hotlinking de imágenes
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?ecoelite\.com\.ve [NC]
+    RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,L]
 </IfModule>
