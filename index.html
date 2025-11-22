@@ -35,9 +35,12 @@
     <title>Recolección GRATIS de Aceite Vegetal Usado Venezuela | Ecoelite</title>
 
 
-    <!-- Preconnect para mejorar rendimiento -->
-    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Preconnect y Preload para mejorar rendimiento -->
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="assets/css/global.css" as="style">
+    <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/img/Principal_Ecoelite-removebg-preview.webp" as="image" fetchpriority="high">
     
     <!-- CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -189,7 +192,7 @@
                 <div class="col-md-4 mb-3 mb-md-0 text-md-left text-center">
                     <a href="#header">
                         <img src="assets/img/Principal_Ecoelite-removebg-preview.webp" alt="Logo de EcoElite - Empresa de reciclaje de aceite vegetal usado en Venezuela"
-                            class="bg-crema rounded-circle img-fluid logo-ecoelite" width="180" height="180">
+                            class="bg-crema rounded-circle img-fluid logo-ecoelite" width="180" height="180" fetchpriority="high">
                     </a>
                 </div>
                 <div class="col-md-8 text-md-left text-center d-flex flex-column justify-content-center"
