@@ -199,17 +199,4 @@ $(document).ready(function () {
 
 
 
-    // Parallax moderno para el header - Solo desktop
-    if ($(window).width() >= 768) {
-        let parallaxTimeout;
-        $(window).scroll(function() {
-            if (parallaxTimeout) {
-                clearTimeout(parallaxTimeout);
-            }
-            parallaxTimeout = setTimeout(function() {
-                const scrolled = $(window).scrollTop();
-                $('#inicio').css('transform', `translateY(${scrolled * 0.5}px)`);
-            }, 16);
-        });
-    }
 });
